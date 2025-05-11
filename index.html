@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gilang Ramadhani Alifianto - Portfolio</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Preload font yang penting -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" as="style">
+
+  <!-- Tambahkan CSS kritis inline -->
+  <style>
+    /* CSS yang dibutuhkan untuk render awal */
+    :root {
+      --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+      --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+      --eerie-black-2: hsl(240, 2%, 12%);
+      --jet: hsl(0, 0%, 22%);
+      --smoky-black: hsl(0, 0%, 7%);
+      --white-2: hsl(0, 0%, 98%);
+      --ff-poppins: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--smoky-black);
+      font-family: var(--ff-poppins);
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar, article {
+      background: var(--eerie-black-2);
+      border: 1px solid var(--jet);
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    }
+
+    /* Animasi dasar */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      will-change: transform, opacity;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .animate-on-scroll.animate {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Pastikan konten terlihat saat di-scroll */
+    .main-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Style dasar untuk konten */
+    .h2, .h3, .h4, .h5 {
+      color: var(--white-2);
+      margin: 0;
+    }
+
+    .article-title {
+      position: relative;
+      padding-bottom: 7px;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <!-- CSS non-kritis load dengan preload -->
+  <link rel="preload" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
+</head>
+
+<body>
+  <main>
+    <!-- #SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box" style="border-radius: 20%; overflow: hidden;">
+          <img src="./assets/images/profile.png" alt="Gilang Ramadhani Alifianto" width="80" loading="eager" style="border-radius: 20%;">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Gilang Ramadhani Alifianto">Gilang Ramadhani Alifianto</h1>
+          <p class="title">UI/UX Designer & Frontend Developer</p>
+        </div>
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:Gilang.alifianto@gmail.com" class="contact-link">Gilang.alifianto@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+6283844457333" class="contact-link">+62 838 4445 7333</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Pekalongan, Central Java, Indonesia</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://s.id/Gilang-Portofolio" class="social-link">
+              <ion-icon name="globe-outline"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- #MAIN-CONTENT -->
+    <div class="main-content">
+      <!-- #ABOUT -->
+      <article class="about">
+        <header>
+          <h2 class="h2 article-title animate-on-scroll">About Me</h2>
+        </header>
+        <section class="about-text animate-on-scroll">
+          <p>
+            I'm a 6th-semester Information Systems student at Telkom University, passionate about UI/UX design and frontend development. 
+            With a strong foundation in web development, graphic design, and data analysis, I thrive on creating user-centric solutions 
+            that are both functional and visually appealing.
+          </p>
+          <p>
+            Currently, I serve as a Web Application Development lab assistant and a UI/UX designer in the ESD study group. 
+            My adaptability, creative thinking, and eagerness to learn drive me to explore new technologies and design trends, 
+            ensuring I deliver innovative and impactful projects.
+          </p>
+        </section>
+        <section class="service">
+          <h3 class="h3 service-title animate-on-scroll">What I'm Doing</h3>
+          <ul class="service-list">
+            <li class="service-item animate-on-scroll">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40" loading="lazy">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UI/UX Design</h4>
+                <p class="service-item-text">
+                  Crafting intuitive and visually appealing interfaces for web and mobile applications.
+                </p>
+              </div>
+            </li>
+            <li class="service-item animate-on-scroll">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40" loading="lazy">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Frontend Development</h4>
+                <p class="service-item-text">
+                  Building responsive and high-quality websites using HTML, JavaScript, and Laravel.
+                </p>
+              </div>
+            </li>
+            <li class="service-item animate-on-scroll">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="graphic design icon" width="40" loading="lazy">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Graphic Design</h4>
+                <p class="service-item-text">
+                  Creating engaging visual content for social media and print media.
+                </p>
+              </div>
+            </li>
+            <li class="service-item animate-on-scroll">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="data analysis icon" width="40" loading="lazy">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analysis</h4>
+                <p class="service-item-text">
+                  Processing and visualizing data to support decision-making using tools like Pivot Tables.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- #RESUME -->
+      <article class="resume">
+        <header>
+          <h2 class="h2 article-title animate-on-scroll">Resume</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3 animate-on-scroll">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item animate-on-scroll">
+              <h4 class="h4 timeline-item-title">Telkom University</h4>
+              <span>2022 — Present</span>
+              <p class="timeline-text">
+                Information Systems, Cumulative GPA: 3.48/4.00. Relevant courses: Cloud Practitioner Essentials, Basic JavaScript, Basic C.
+                Active as Web Application Development Lab Assistant and UI/UX Designer in ESD Study Group.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3 animate-on-scroll">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item animate-on-scroll">
+              <h4 class="h4 timeline-item-title">Web Application Development Lab Assistant</h4>
+              <span>Apr 2025 — Present</span>
+              <p class="timeline-text">
+                Managed 7+ practicum participants per class across 4 shifts, including an international class. 
+                Created and explained Laravel modules covering CRUD and Middleware.
+              </p>
+            </li>
+            <li class="timeline-item animate-on-scroll">
+              <h4 class="h4 timeline-item-title">Pembinaan Pelaksanaan Anggaran II</h4>
+              <span>Dec 2024 — Feb 2025</span>
+              <p class="timeline-text">
+                Processed 200+ raw data entries using Pivot Tables, designed the Regional Fiscal Study book, 
+                and organized data reports from 5+ cities in West Java for the Ministry of Finance DJPb.
+              </p>
+            </li>
+            <li class="timeline-item animate-on-scroll">
+              <h4 class="h4 timeline-item-title">Internship Graphic Design</h4>
+              <span>Jul — Oct 2024</span>
+              <p class="timeline-text">
+                Created 100+ cover and feed designs for Yayasan Amal Produktif Indonesia, achieving over 400 likes on Instagram posts.
+              </p>
+            </li>
+            <li class="timeline-item animate-on-scroll">
+              <h4 class="h4 timeline-item-title">Writer</h4>
+              <span>Feb — Mar 2023</span>
+              <p class="timeline-text">
+                Wrote 50+ articles on technology, law, and entertainment for Suara.com (Network JABAR), 
+                achieving Top 10 ranking for most-visited articles.
+              </p>
+            </li>
+            <li class="timeline-item animate-on-scroll">
+              <h4 class="h4 timeline-item-title">UI/UX Designer, ESD Study Group</h4>
+              <span>Jan — Nov 2024</span>
+              <p class="timeline-text">
+                Initiated brainstorming sessions for user-centric designs, conducted project pitches, and managed project documentation.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="skill">
+          <h3 class="h3 skills-title animate-on-scroll">My Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item animate-on-scroll">
+              <div class="title-wrapper">
+                <h5 class="h5">UI/UX Design</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skills-item animate-on-scroll">
+              <div class="title-wrapper">
+                <h5 class="h5">Frontend Development</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item animate-on-scroll">
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic Design</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item animate-on-scroll">
+              <div class="title-wrapper">
+                <h5 class="h5">Data Analysis</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- #PORTFOLIO -->
+      <article class="portfolio">
+        <header>
+          <h2 class="h2 article-title animate-on-scroll">Portfolio</h2>
+        </header>
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>UI/UX Design</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web Development</button>
+            </li>
+          </ul>
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>UI/UX Design</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Web Development</button>
+              </li>
+            </ul>
+          </div>
+          <ul class="project-list">
+            <li class="project-item active animate-on-scroll" data-filter-item data-category="web development">
+              <a href="https://github.com/Gramadhani29/Daily-Chores">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Gedung-Sate-Bandung.jpg" alt="Daily Chores" loading="lazy">
+                </figure>
+                <h3 class="project-title">Daily Chores</h3>
+                <p class="project-category">Web Development</p>
+              </a>
+            </li>
+            <li class="project-item active animate-on-scroll" data-filter-item data-category="web development">
+              <a href="https://github.com/Gramadhani29/PointOfSales.git">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.png" alt="Point of Sales System" loading="lazy">
+                </figure>
+                <h3 class="project-title">Point of Sales System</h3>
+                <p class="project-category">Web Development</p>
+              </a>
+            </li>
+            <li class="project-item active animate-on-scroll" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-3.jpg" alt="Suara Anda" loading="lazy">
+                </figure>
+                <h3 class="project-title">Suara Anda</h3>
+                <p class="project-category">Web Development</p>
+              </a>
+            </li>
+            <li class="project-item active animate-on-scroll" data-filter-item data-category="ui/ux design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-4.png" alt="Intuitiva" loading="lazy">
+                </figure>
+                <h3 class="project-title">Intuitiva</h3>
+                <p class="project-category">UI/UX Design</p>
+              </a>
+            </li>
+            <li class="project-item active animate-on-scroll" data-filter-item data-category="ui/ux design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="MyAndalan" loading="lazy">
+                </figure>
+                <h3 class="project-title">MyAndalan</h3>
+                <p class="project-category">UI/UX Design</p>
+              </a>
+            </li>
+            <li class="project-item active animate-on-scroll" data-filter-item data-category="ui/ux design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-6.png" alt="MyBudin" loading="lazy">
+                </figure>
+                <h3 class="project-title">MyBudin</h3>
+                <p class="project-category">UI/UX Design</p>
+              </a>
+            </li>
+            <li class="project-item active animate-on-scroll" data-filter-item data-category="ui/ux design">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-7.png" alt="Dietyuk!" loading="lazy">
+                </figure>
+                <h3 class="project-title">Dietyuk!</h3>
+                <p class="project-category">UI/UX Design</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- #CONTACT -->
+      <article class="contact">
+        <header>
+          <h2 class="h2 article-title animate-on-scroll">Contact</h2>
+        </header>
+        <section class="mapbox animate-on-scroll" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15844.627811912766!2d109.65728509999999!3d-6.8876994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fc55a6b3a9b43%3A0x401e40276f8ed30!2sPekalongan%2C%20Pekalongan%20City%2C%20Central%20Java%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1698765432101!5m2!1sen!2sid"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+        <section class="contact-form">
+          <h3 class="h3 form-title animate-on-scroll">Contact Form</h3>
+          <form action="#" class="form animate-on-scroll" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- custom js link -->
+  <script defer src="./assets/js/script.js"></script>
+
+  <!-- ionicon link -->
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
